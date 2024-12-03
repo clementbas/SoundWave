@@ -1,0 +1,53 @@
+1 - Introduction
+
+Le projet SoundWave se positionne comme une application innovante dédiée à la collaboration musicale en ligne. Son objectif principal est de faciliter l'achèvement des projets musicaux inachevés en offrant une plateforme où les utilisateurs peuvent mettre en ligne leurs créations pour que d'autres puissent les améliorer. Cette initiative est venu d'un producteur de musique, qui ayant repéré cette problématique de projet inachevés, à imaginé une solution à ce problème, visant à proposer une alternative aux compositeurs souhaitant finaliser leurs œuvres.
+
+Le cahier des charges de SoundWave joue un rôle crucial en alignant les attentes des différentes parties prenantes, notamment les développeurs, les marketeurs et les communicants. Il sert de référence commune pour garantir que tous comprennent les objectifs et les exigences du projet. En évitant les conflits sur l'interprétation des spécifications fonctionnelles, ce document assure une exécution cohérente et efficace du développement de l'application.
+
+En ciblant principalement les musiciens amateurs, les producteurs professionnels, ainsi que les étudiants en musique et leurs enseignants, SoundWave ambitionne de créer une plateforme interactive. Cette approche vise à enrichir l'expérience musicale en ligne, en permettant une découverte et une amélioration collaborative des productions musicales.
+
+2 - Fonctionnalités de l'application
+	2.1 - Téléchargement et partage de la musique
+
+Les utilisateurs peuvent télécharger leurs pistes musicales dans un espace commun dédié, permettant ainsi une collaboration ouverte avec d'autres membres de la communauté SoundWave.
+
+Seuls les formats compressés tels que le MP3 sont acceptés pour le téléchargement, garantissant une compatibilité et une gestion efficace de l'espace de stockage.
+
+Une fois téléchargées, les pistes sont soumises à un contrôle automatique des droits d'auteur avant d'être mises à disposition pour écoute et modification.
+
+La gestion des accès est structurée de manière à ce que tous les utilisateurs puissent écouter les pistes, tandis que seules certaines personnes, après une validation, peuvent les modifier.
+
+Un workflow simplifié est mis en place : les utilisateurs téléversent leurs pistes, ajoutent des informations pertinentes, et les pistes apparaissent immédiatement après validation.
+
+Une équipe de modérateurs examine les nouvelles propositions chaque semaine pour assurer la qualité et la conformité des pistes partagées.
+
+L'interface utilisateur est conçue pour faciliter le processus de téléchargement avec un bouton clair et des instructions en popup, garantissant une expérience utilisateur fluide et intuitive.
+
+Les pistes peuvent être mises à jour ou modifiées uniquement après approbation des modérateurs, assurant ainsi un contrôle de qualité rigoureux.
+
+
+	2.2 - Amélioration collaborative
+
+3 - Spécifications techniques
+	3.1 - Plateformes supportées
+	3.2 - Technologies utilisées
+
+4 - Objectifs et critères de succès
+	4.1 - Objectifs principaux
+	4.2 - Critères de succès
+
+5 - Planification du projet
+	5.1 - Délais et jalons
+	5.2 - Phases du projet
+
+6 - Exigences légales
+	6.1 - Conformité RGPD
+	6.2 - Licences et droits d'auteur
+
+7 - Expérience utilisateur
+	7.1 - Design et interface
+	7.2 - Personnalisation
+
+8 - Ressources et contraintes
+	8.1 Ressources humaines
+	8.2 Contraintes financières
