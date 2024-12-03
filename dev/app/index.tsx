@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View, Alert, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import 'react-native-gesture-handler';
 
-export default function Home() {
+export default function Home({ navigation }: { navigation: any }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -64,7 +65,7 @@ export default function Home() {
 
       {/* Lien d'inscription */}
       <Text style={styles.registerText}>
-        Pas encore de compte ? <Text style={styles.registerLink}>Inscrivez-vous</Text>
+        Pas encore de compte ? <Text style={styles.registerLink}onPress={() => navigation.navigate('Register')}>Inscrivez-vous</Text>
       </Text>
     </View>
   );
