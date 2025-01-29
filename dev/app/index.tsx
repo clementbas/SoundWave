@@ -15,6 +15,9 @@ export default function Home({ navigation }: { navigation: any }) {
 
     // Exemple de validation pour afficher une alerte de succès
     Alert.alert('Connexion réussie', `Email: ${email}\nMot de passe: ${password}`);  //supprimer après tests
+
+    // Rediriger vers la page d'accueil après connexion
+    navigation.navigate('HomePage');
   };
 
   return (

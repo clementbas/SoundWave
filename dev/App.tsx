@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './App/index'; // Page de connexion
 import Register from './App/register'; // Page d'inscription
+import HomePage from './App/homePage'; // Page d'accueil
 import { TouchableOpacity, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Librairie d'icônes
 
@@ -37,6 +38,11 @@ export default function App() {
               </TouchableOpacity>
               ),
             })}
+        />
+        <Stack.Screen 
+          name="HomePage" 
+          component={HomePage} 
+          options={{ headerShown: false }} // Cache l'en-tête
         />
       </Stack.Navigator>
     </NavigationContainer>
