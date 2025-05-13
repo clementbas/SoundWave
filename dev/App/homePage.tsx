@@ -61,12 +61,15 @@ export default function HomePage({ navigation }: { navigation: any }) {
         {/* Following Section */}
         <Text style={styles.sectionTitle}>Following</Text>
         <View style={styles.followingBox} />
+      <TouchableOpacity onPress={() => navigation.navigate('ProductPage')}>
+        <View style={styles.followingBox} />
+      </TouchableOpacity>
+        <View style={styles.followingBox} />
         <View style={styles.followingBox} />
         <View style={styles.followingBox} />
         <View style={styles.followingBox} />
         <View style={styles.followingBox} />
       </ScrollView>
-
       {/* Footer fixe */}
       <View style={styles.footer}>
         <TouchableOpacity style={styles.feedButton} onPress={() => alert('Feed')}>

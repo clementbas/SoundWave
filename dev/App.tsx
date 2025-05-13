@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Login from './App';
+import Login from './App/login'; // Corrected import for Login component
 import Register from './App/register'; // Page d'inscription
 import HomePage from './App/homePage'; // Page d'accueil
 import UploadPage from './App/upload';
+import ProductPage from './App/productPage';
 import { TouchableOpacity, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Librairie d'icônes
 
@@ -50,6 +51,11 @@ export default function App() {
           component={UploadPage}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name='ProductPage'
+          component={
+            ProductPage
+          } />
       </Stack.Navigator>
     </NavigationContainer>
   );
