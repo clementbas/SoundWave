@@ -1,5 +1,6 @@
 {
   "expo": {
+    "sdkVersion": "53.0.0",
     "name": "ProjetSoundWave",
     "slug": "ProjetSoundWave",
     "version": "1.0.0",
