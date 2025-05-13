@@ -29,7 +29,7 @@ export default function HomePage({ navigation }: { navigation: any }) {
         <TouchableOpacity style={styles.feedButton} onPress={() => alert('Feed')}>
           <AntDesign name="home" size={40} color="#000" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.uploadButton} onPress={() => alert('Upload Screen')}>
+        <TouchableOpacity style={styles.uploadButton} onPress={() => navigation.navigate('Upload')}>
             <Feather name="upload" size={40} color="#fff" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.shopButton} onPress={() => alert('MarketPlace')}>
