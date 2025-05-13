@@ -5,6 +5,7 @@ import Login from './App/index';
 import Register from './App/register'; // Page d'inscription
 import HomePage from './App/homePage'; // Page d'accueil
 import UploadPage from './App/upload';
+import ProductPage from './App/productPage';
 import { TouchableOpacity, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Librairie d'icônes
 
@@ -46,6 +47,11 @@ export default function App() {
           options={{ headerShown: false }} // Cache l'en-tête
         />
         <Stack.Screen name="Upload" component={UploadPage} />
+        <Stack.Screen
+          name='ProductPage'
+          component={
+            ProductPage
+          } />
       </Stack.Navigator>
     </NavigationContainer>
   );
