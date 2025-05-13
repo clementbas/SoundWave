@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-native-reanimated-carousel';
 import { ScrollView, View, Text, StyleSheet, Image, TouchableOpacity, Dimensions, ImageBackground } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
@@ -7,10 +7,12 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 const { width } = Dimensions.get('window');
 
 export default function HomePage({ navigation }: { navigation: any }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const data = [
-    { id: '1', image: require('../assets/images/photo.png') },
-    { id: '2', image: require('../assets/images/2.png') },
-    { id: '3', image: require('../assets/images/3.png') },
+    { id: '1', image: require('../assets/images/photo.png'), title: 'Photo 1' },
+    { id: '2', image: require('../assets/images/2.png'), title: 'Photo 2' },
+    { id: '3', image: require('../assets/images/3.png'), title: 'Photo 3' },
   ];
 
   const renderItem = ({ item }: { item: { id: string; title: string; image: any } }) => (
@@ -39,8 +41,22 @@ export default function HomePage({ navigation }: { navigation: any }) {
           data={data}
           renderItem={renderItem}
           loop
+          onSnapToItem={(index) => setActiveIndex(index)}
           style={{ paddingHorizontal: 10 }}
         />
+
+        {/* Points indicateurs */}
+        <View style={styles.indicatorContainer}>
+          {data.map((_, index) => (
+            <View
+              key={index}
+              style={[
+                styles.indicator,
+                activeIndex === index && styles.activeIndicator,
+              ]}
+            />
+          ))}
+        </View>
 
         {/* Following Section */}
         <Text style={styles.sectionTitle}>Following</Text>
@@ -160,5 +176,20 @@ const styles = StyleSheet.create({
   },
   navItem: {
     fontSize: 14,
+  },
+  indicatorContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  indicator: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#ddd',
+    marginHorizontal: 4,
+  },
+  activeIndicator: {
+    backgroundColor: '#000',
   },
 });
