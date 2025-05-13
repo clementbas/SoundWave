@@ -55,7 +55,8 @@ export default function App() {
           name='ProductPage'
           component={
             ProductPage
-          } />
+          }
+          options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

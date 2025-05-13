@@ -31,6 +31,9 @@ export default function HomePage({ navigation }: { navigation: any }) {
           <TouchableOpacity onPress={() => alert('Ouvrir Profil')}>
             <Image style={styles.profileImage} source={require('../assets/images/photoprofile.png')} />
           </TouchableOpacity>
+        <TouchableOpacity onPress={() => alert('Notifications')}>
+          <Feather name="bell" size={30} color="#000" style={styles.notificationIcon} />
+        </TouchableOpacity>
         </View>
 
         {/* Trending Section */}
@@ -60,15 +63,23 @@ export default function HomePage({ navigation }: { navigation: any }) {
 
         {/* Following Section */}
         <Text style={styles.sectionTitle}>Following</Text>
-        <View style={styles.followingBox} />
-      <TouchableOpacity onPress={() => navigation.navigate('ProductPage')}>
-        <View style={styles.followingBox} />
-      </TouchableOpacity>
-        <View style={styles.followingBox} />
-        <View style={styles.followingBox} />
-        <View style={styles.followingBox} />
-        <View style={styles.followingBox} />
-        <View style={styles.followingBox} />
+        <View style={styles.followingBox}>
+          <Image source={require('../assets/images/following1.png')} style={styles.followingImage} />
+        </View>
+        <TouchableOpacity onPress={() => navigation.navigate('ProductPage')}>
+          <View style={styles.followingBox}>
+            <Image source={require('../assets/images/following2.png')} style={styles.followingImage} />
+          </View>
+        </TouchableOpacity>
+        <View style={styles.followingBox}>
+          <Image source={require('../assets/images/following3.png')} style={styles.followingImage} />
+        </View>
+        <View style={styles.followingBox}>
+          <Image source={require('../assets/images/following4.png')} style={styles.followingImage} />
+        </View>
+        <View style={styles.followingBox}>
+          <Image source={require('../assets/images/following5.png')} style={styles.followingImage} />
+        </View>
       </ScrollView>
       {/* Footer fixe */}
       <View style={styles.footer}>
@@ -96,8 +107,9 @@ const styles = StyleSheet.create({
     paddingBottom: 120, // Ajoute un espace pour éviter que le contenu ne soit masqué par le footer
   },
   profileContainer: {
-    flexDirection: 'column',
-    alignSelf: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'space-between', // Espace entre les éléments
+    alignItems: 'center',
     marginTop: 40,
     marginBottom: 10,
   },
@@ -105,6 +117,9 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
+  },
+  notificationIcon: {
+    marginRight: 10, // Ajoute un espace à droite
   },
   sectionTitle: {
     fontSize: 18,
@@ -132,6 +147,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#ddd',
     borderRadius: 10,
     marginBottom: 10,
+  },
+  followingImage: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 10,
   },
   footer: {
     position: 'absolute',
