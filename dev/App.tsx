@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Login from './App/index';
+import Login from './App';
 import Register from './App/register'; // Page d'inscription
 import HomePage from './App/homePage'; // Page d'accueil
 import UploadPage from './App/upload';
@@ -45,7 +45,11 @@ export default function App() {
           component={HomePage} 
           options={{ headerShown: false }} // Cache l'en-tête
         />
-        <Stack.Screen name="Upload" component={UploadPage} />
+        <Stack.Screen
+          name="Upload"
+          component={UploadPage}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
