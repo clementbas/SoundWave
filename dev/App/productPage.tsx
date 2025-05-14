@@ -55,8 +55,11 @@ export default function HashtagButtons({ navigation }: { navigation: any }) {
         <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 10 }}>
           SPQR vol.6
         </Text>
-        <Text style={{ fontSize: 16, color: '#888' }}>
+        <Text style={{ fontSize: 16, color: '#888', marginBottom: 10 }}>
           Dj Fluction
+        </Text>
+                <Text style={{ fontSize: 16, color: '#888', justifyContent: 'center', textAlign: 'center', marginBottom: 10 }}>
+          Une ambiance chillwave mélancolique avec des synthétiseurs rétro. Parfait pour se détendre ou travailler.
         </Text>
       </View>
 
@@ -129,7 +132,7 @@ const styles = StyleSheet.create({
     height: 350, // Garde la hauteur fixe
     resizeMode: 'cover', // Ajuste l'image pour couvrir l'espace
     marginTop: 150,
-    marginBottom: 90,
+    marginBottom: 40,
     alignSelf: 'center', // Centre l'image horizontalement
     borderRadius: 10, // Ajoute des coins arrondis si nécessaire
   },
