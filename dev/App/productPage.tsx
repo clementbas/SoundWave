@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import Feather from 'react-native-vector-icons/Feather';
 
 function FakeAudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -26,7 +27,7 @@ function FakeAudioPlayer() {
   );
 }
 
-export default function HashtagButtons() {
+export default function HashtagButtons({ navigation }: { navigation: any }) {
   const [liked, setLiked] = useState(false);
 
   const hashtags = [
@@ -39,6 +40,26 @@ export default function HashtagButtons() {
 
   return (
     <View style={styles.container}>
+      {/* Back Button */}
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Feather name="arrow-left" size={30} color="#000" />
+      </TouchableOpacity>
+
+      {/* Image at the top */}
+      <Image
+        style={styles.topImage}
+        source={require('../assets/images/aa.jpg')}
+      />
+
+      <View style={styles.infos}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 10 }}>
+          SPQR vol.6
+        </Text>
+        <Text style={{ fontSize: 16, color: '#888' }}>
+          Dj Fluction
+        </Text>
+      </View>
+
       <View style={styles.bottomSection}>
         {/* Fake audio player just above hashtags */}
         <FakeAudioPlayer />
@@ -82,10 +103,35 @@ export default function HashtagButtons() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     paddingBottom: 50,
     backgroundColor: '#fff',
+  },
+  infos: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  backButton: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    backgroundColor: '#fff',
+    borderRadius: 50,
+    padding: 10,
+    elevation: 5,
+    marginTop: 20,
+  },
+  topImage: {
+    width: '85%', // Réduit la largeur à 80% de l'écran
+    height: 350, // Garde la hauteur fixe
+    resizeMode: 'cover', // Ajuste l'image pour couvrir l'espace
+    marginTop: 150,
+    marginBottom: 90,
+    alignSelf: 'center', // Centre l'image horizontalement
+    borderRadius: 10, // Ajoute des coins arrondis si nécessaire
   },
   bottomSection: {
     width: '100%',

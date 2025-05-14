@@ -28,12 +28,12 @@ export default function HomePage({ navigation }: { navigation: any }) {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         {/* Profile */}
         <View style={styles.profileContainer}>
-          <TouchableOpacity onPress={() => alert('Ouvrir Profil')}>
+          <TouchableOpacity onPress={() => navigation.navigate('profilePage')}>
             <Image style={styles.profileImage} source={require('../assets/images/photoprofile.png')} />
           </TouchableOpacity>
-        <TouchableOpacity onPress={() => alert('Notifications')}>
-          <Feather name="bell" size={30} color="#000" style={styles.notificationIcon} />
-        </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Notifications')}>
+            <Feather name="bell" size={30} color="#000" style={styles.notificationIcon} />
+          </TouchableOpacity>
         </View>
 
         {/* Trending Section */}
@@ -63,24 +63,33 @@ export default function HomePage({ navigation }: { navigation: any }) {
 
         {/* Following Section */}
         <Text style={styles.sectionTitle}>Following</Text>
-        <View style={styles.followingBox}>
-          <Image source={require('../assets/images/following1.png')} style={styles.followingImage} />
-        </View>
         <TouchableOpacity onPress={() => navigation.navigate('ProductPage')}>
           <View style={styles.followingBox}>
-            <Image source={require('../assets/images/following2.png')} style={styles.followingImage} />
+            <Image source={require('../assets/images/following1.png')} style={styles.followingImage} />
           </View>
         </TouchableOpacity>
+
+        <View style={styles.followingBox}>
+          <Image source={require('../assets/images/following2.png')} style={styles.followingImage} />
+        </View>
+
         <View style={styles.followingBox}>
           <Image source={require('../assets/images/following3.png')} style={styles.followingImage} />
         </View>
+
+
+
         <View style={styles.followingBox}>
           <Image source={require('../assets/images/following4.png')} style={styles.followingImage} />
         </View>
+
+
         <View style={styles.followingBox}>
           <Image source={require('../assets/images/following5.png')} style={styles.followingImage} />
         </View>
+
       </ScrollView>
+
       {/* Footer fixe */}
       <View style={styles.footer}>
         <TouchableOpacity style={styles.feedButton} onPress={() => alert('Feed')}>

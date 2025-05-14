@@ -6,6 +6,7 @@ import Register from './App/register'; // Page d'inscription
 import HomePage from './App/homePage'; // Page d'accueil
 import UploadPage from './App/upload';
 import ProductPage from './App/productPage';
+import profilePage from './App/profilePage'; // Page de profil
 import { TouchableOpacity, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Librairie d'icônes
 
@@ -57,6 +58,8 @@ export default function App() {
             ProductPage
           }
           options={{ headerShown: false }} />
+
+        <Stack.Screen name="profilePage" component={profilePage} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
